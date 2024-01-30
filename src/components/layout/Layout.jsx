@@ -1,9 +1,10 @@
+import { Container } from "@chakra-ui/react";
 import Footer from "./Footer";
 import Header from "./Header";
 
 export default function Layout(props) {
   return (
-    <div className="wrap">
+    <>
       <Header />
       <main id="main">
         <h2>{props.title}</h2>
@@ -11,6 +12,6 @@ export default function Layout(props) {
         <p>{props.children}</p>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
