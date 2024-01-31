@@ -1,10 +1,11 @@
-import Routers from "./Routers";
-import { ChakraProvider } from "@chakra-ui/react";
 // import "./assets/scss/style.scss";
+import { ChakraProvider } from "@chakra-ui/react";
+import Routers from "./Routers";
+import theme from "./theme";
 
 function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Routers />
     </ChakraProvider>
   );
