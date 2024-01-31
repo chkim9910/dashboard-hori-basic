@@ -21,13 +21,14 @@ export default function Header() {
       alignItems={"center"}
       justifyContent={"center"}
     >
-      <ContainerLg py={4}>
+      <ContainerLg ali>
         <Box
           display={"flex"}
           flexDirection={["column", null, "row"]}
           justifyContent={["space-between", null, "center"]}
           alignItems={["space-between", null, "center"]}
           gap={[10, null, 40]}
+          color={"white"}
         >
           <Heading fontSize={24} alignItems={"center"}>
             <Link to="/">Dashboard</Link>

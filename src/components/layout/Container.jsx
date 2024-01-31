@@ -9,13 +9,15 @@ export default function ContainerLg(props) {
       color={"white"}
       height={"100%"}
       display={"flex"}
-      alignContent={"center"}
+      alignItems={"center"}
+      justifyContent={"center"}
+      flexDirection={"column"}
     >
       {props.children}
     </Container>
   );
 }
 
-export function Section() {
-  <Box></Box>;
+export function Section(props) {
+  return <Box>{props.children}</Box>;
 }
