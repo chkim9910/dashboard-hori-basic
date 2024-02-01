@@ -1,13 +1,13 @@
-import { Box, Container, Heading } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import ContainerLg from "./Container";
+import { lighten } from "polished";
 
 export default function Footer() {
   return (
     <Box
       as="footer"
       height={["60px", null, "100px"]}
-      // bg={"#ddd"}
-      bg="brand.100"
+      bg={lighten(0, "purple")}
       display={"flex"}
       justifyContent={"center"}
     >

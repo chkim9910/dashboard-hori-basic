@@ -12,13 +12,13 @@ const routeArr = [
   { path: "/profile", element: <Profile /> },
   { path: "/signin", element: <SignIn /> },
 ];
+// router 페이지 이동을 쉽게 구현하도록 돕는 라이브러리
+// 라우팅은 최상위 파일에서 함
+// router 버전이 6이상이기 때문에 <BrowserRouter></BrowserRouter>로 감싸줘야 함
+// 버전에 맞게 구문 넣을 수 있도록 신경쓰기
 
 export default function Routers() {
   return (
-    // router 페이지 이동을 쉽게 구현하도록 돕는 라이브러리
-    // 라우팅은 최상위 파일에서 함
-    // router 버전이 6이상이기 때문에 <BrowserRouter></BrowserRouter>로 감싸줘야 함
-    // 버전에 맞게 구문 넣을 수 있도록 신경쓰기
     <BrowserRouter>
       <Routes>
         {/* item은 객체 하나를 의미 */}

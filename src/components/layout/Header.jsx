@@ -2,13 +2,14 @@ import { SearchIcon, SunIcon } from "@chakra-ui/icons";
 import {
   Box,
   Heading,
-  Container,
   IconButton,
   ButtonGroup,
+  Button,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ContainerLg from "./Container";
+import { lighten } from "polished";
 
 export default function Header() {
   return (
@@ -30,9 +31,9 @@ export default function Header() {
           gap={[10, null, 40]}
           color={"white"}
         >
-          <Heading fontSize={24} alignItems={"center"}>
+          <Logo>
             <Link to="/">Dashboard</Link>
-          </Heading>
+          </Logo>
           <Nav>
             <NavList>
               <li>
@@ -52,19 +53,23 @@ export default function Header() {
               </li>
             </NavList>
           </Nav>
-          <IconBtnGoup>
+          <ButtonGroup>
             <IconButton
-              bg={"transparent"}
-              // variant="ghost"
+              variant="iconbtn"
               aria-label="Search database"
               icon={<SearchIcon />}
             />
             <IconButton
               // variant="ghost"
+              // variant="iconbtn"
               aria-label="Light database"
               icon={<SunIcon />}
             />
-          </IconBtnGoup>
+          </ButtonGroup>
+          <ButtonGroup variant="outline" spacing="6">
+            <Button colorScheme="blue">Save</Button>
+            <Button>Cancel</Button>
+          </ButtonGroup>
         </Box>
       </ContainerLg>
     </Box>
@@ -79,15 +84,25 @@ export default function Header() {
 // 스타일 컴포넌트
 // 컴포넌트가 들어와야 할 때는 소괄호에 컴포넌트 명을 넣어주면 됨
 // const 변수 이름 = styled(컴포넌트 이름)`속성: 값;`
-const IconBtnGoup = styled(ButtonGroup)`
-  button {
-    background: transparent;
-    color: white;
-    &:hover {
-      background: rgba(236, 255, 64, 0.4);
-    }
+const Logo = styled.h1`
+  font-size: 24px;
+  &:hover {
+    background: ${({ theme }) => theme.colors.yellow[100]};
+    color: ${({ theme }) => lighten(0.2, theme.colors.brand[300])};
   }
 `;
+
+// const IconBtnGoup = styled(ButtonGroup)`
+//   button {
+//     background: transparent;
+//     /* color: white; */
+//     &:hover {
+//       background: ${lighten(0.1, "purple")};
+
+//       /* background: rgba(236, 255, 64, 0.4); */
+//     }
+//   }
+// `;
 
 const Nav = styled.nav`
   height: 100%;
@@ -112,7 +127,7 @@ const NavList = styled.ul`
   a {
     display: block;
     &:hover {
-      color: #ecff40;
+      color: ${lighten(0.5, "purple")};
     }
   }
 `;
