@@ -6,6 +6,7 @@ import ContainerLg from "./Container";
 export default function Layout(props) {
   return (
     <Box
+      as="wrap"
       display={"flex"}
       flexDirection={"column"}
       minHeight={"100svh"}
@@ -13,13 +14,14 @@ export default function Layout(props) {
     >
       <Header />
       <Box as="main" id="main" flexGrow={1}>
-        <ContainerLg>
-          <h2>{props.title}</h2>
-          {/* props의 자식값(Layout의 여는 태그, 닫는 태그 사이에 있는 문자) */}
-          <div>{props.children}</div>
-        </ContainerLg>
+        {props.showTitle && <h2>{props.title}</h2>}
+        {props.children}
       </Box>
       <Footer />
     </Box>
   );
+  {
+  }
 }
+
+/* children은 props의 자식값(Layout의 여는 태그, 닫는 태그 사이에 있는 문자) */

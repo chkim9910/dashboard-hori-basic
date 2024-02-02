@@ -19,5 +19,10 @@ export default function ContainerLg(props) {
 }
 
 export function Section(props) {
-  return <Box>{props.children}</Box>;
+  const backgroundColor = props.isLightBackground ? "white" : "gray.100";
+  return (
+    <Box py={"100px"} bg={backgroundColor}>
+      <Container>{props.children}</Container>
+    </Box>
+  );
 }

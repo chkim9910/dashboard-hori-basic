@@ -25,6 +25,7 @@ export default function Header() {
         top={0}
         left={0}
         right={0}
+        zIndex={1000}
         backdropFilter={"saturate(180%) blur(15px)"}
         backgroundColor={"rgba(0,0,0,.1)"}
         flexDirection={["row", null, "column"]}
@@ -72,6 +73,7 @@ export default function Header() {
           alignItems={"center"}
           justifyContent={"center"}
           height={{ sm: "52px", lg: "100px" }}
+          borderBottomWidth={0}
         >
           <Container
             display={"flex"}

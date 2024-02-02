@@ -1,14 +1,14 @@
 import Title, { Subtitle } from "../../components/common/Title";
 import { Section } from "../../components/layout/Container";
 import Layout from "../../components/layout/Layout";
-// import Mainslide from "./components/Mainslide";
+import Mainslide from "./components/Mainslide";
 
 export default function Home() {
   return (
     <>
-      <Layout title="home">
-        {/* <Mainslide /> */}
-        <Section>
+      <Layout title="home" showTitle={false}>
+        <Mainslide />
+        <Section isLightBackground={true}>
           <Title>회사소개</Title>
           <Subtitle>인사글</Subtitle>
           <p style={{ color: "black" }}>
