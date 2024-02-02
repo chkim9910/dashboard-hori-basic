@@ -115,8 +115,8 @@ export const globalStyles = {
       },
 
       ".chakra-container": {
-        // maxWidth: ["calc(1280px + var(--chakra-space-4) *2) !important"],
-        maxWidth: "1280px !important",
+        maxWidth: ["calc(1280px + var(--chakra-space-4) *2) !important"],
+        // maxWidth: "1280px !important",
       },
     }),
   },

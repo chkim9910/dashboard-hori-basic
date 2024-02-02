@@ -80,7 +80,7 @@ export default function Header() {
             flexDirection={["column", null, "row"]}
             justifyContent={"space-between"}
             alignItems={["space-between", null, "center"]}
-            gap={[10, null, 40]}
+            // gap={[10, null, 40]}
             color={"white"}
           >
             <Heading as={"h1"}>
