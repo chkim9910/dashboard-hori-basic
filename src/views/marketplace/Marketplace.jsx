@@ -1,12 +1,12 @@
-import Title from "../components/common/Title";
-import { Section } from "../components/layout/Container";
-import Layout from "../components/layout/Layout";
+import Title from "../../components/common/Title";
+import { Section } from "../../components/layout/Container";
+import Layout from "../../components/layout/Layout";
 
-export default function DataTables() {
+export default function Marketplace() {
   return (
-    <Layout title="DataTables">
+    <Layout title="Marketplace">
       <Section>
-        <Title>데이터테이블</Title>
+        <Title>마켓플레이스 소개</Title>
         <p style={{ color: "black" }}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
           quam, reiciendis, quis consequuntur accusamus nisi esse maxime unde,

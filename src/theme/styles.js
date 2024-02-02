@@ -1,6 +1,10 @@
 import { mode } from "@chakra-ui/theme-tools";
 import { lighten } from "polished";
 
+// const variables = {
+//   maxWidth: "1280px",
+// };
+
 export const globalStyles = {
   colors: {
     yellow: {
@@ -95,12 +99,24 @@ export const globalStyles = {
         color: "gray.900",
         lineHeight: "1.5",
         fontSize: "16px",
+        minWidth: "320px",
       },
       input: {
         color: "gray.700",
       },
       html: {
         fontFamily: '"Noto Sans KR", "sans-serif"',
+      },
+      li: {
+        listStyle: "none",
+        a: {
+          fontSize: "16px",
+        },
+      },
+
+      ".chakra-container": {
+        // maxWidth: ["calc(1280px + var(--chakra-space-4) *2) !important"],
+        maxWidth: "1280px !important",
       },
     }),
   },

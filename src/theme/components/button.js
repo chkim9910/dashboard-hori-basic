@@ -17,14 +17,24 @@ export const buttonStyles = {
         },
       },
       variants: {
-        iconbtn: () => ({
-          bg: "red",
-        }),
+        // iconbtn: () => ({
+        //   fontSize: "25px",
+        //   // bg: "red",
+        // }),
         outline: () => ({
           borderRadius: "0",
-          bg: ["red.900", "brand.900", null, null, null, "brand.500"],
+          // bg: ["red.900", "brand.900", null, null, null, "brand.500"],
           color: { sm: "gray.800", lg: "gray.100" },
-          border: "none",
+          // border: "none",
+          borderRadius: "6px",
+        }),
+        solid: () => ({
+          borderRadius: "0",
+          bg: "white",
+          // bg: ["red.900", "brand.900", null, null, null, "brand.500"],
+          color: "gray.900",
+          // border: "none",
+          borderRadius: "6px",
         }),
         brand: (props) => ({
           bg: mode("brand.500", "brand.400")(props),
@@ -104,6 +114,15 @@ export const buttonStyles = {
           _active: { bg: mode("transparent", "brand.400")(props) },
           _hover: {
             bg: mode("secondaryGray.100", "brand.400")(props),
+          },
+        }),
+        "link-12": (props) => ({
+          fontSize: "12px",
+          padding: 0,
+          "margin-inline-start": "0 !important",
+          color: "white",
+          _hover: {
+            color: "#4ca4f5",
           },
         }),
       },

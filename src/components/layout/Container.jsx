@@ -4,14 +4,14 @@ export default function ContainerLg(props) {
   return (
     <Container
       maxW={1280}
+      height={"100%"}
       mx={"auto"}
       px={["20px", null, 0]}
-      color={"white"}
-      height={"100%"}
       display={"flex"}
       alignItems={"center"}
       justifyContent={"center"}
       flexDirection={"column"}
+      color={"white"}
     >
       {props.children}
     </Container>

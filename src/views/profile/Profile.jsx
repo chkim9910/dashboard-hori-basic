@@ -1,12 +1,12 @@
-import Title from "../components/common/Title";
-import { Section } from "../components/layout/Container";
-import Layout from "../components/layout/Layout";
+import Title from "../../components/common/Title";
+import { Section } from "../../components/layout/Container";
+import Layout from "../../components/layout/Layout";
 
-const SignIn = () => {
+export default function Profile() {
   return (
-    <Layout title="SignIn">
+    <Layout title="Profile">
       <Section>
-        <Title>로그인</Title>
+        <Title>프로필</Title>
         <p style={{ color: "black" }}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
           quam, reiciendis, quis consequuntur accusamus nisi esse maxime unde,
@@ -16,6 +16,4 @@ const SignIn = () => {
       </Section>
     </Layout>
   );
-};
-
-export default SignIn;
+}
