@@ -4,7 +4,7 @@ import Layout from "../../components/layout/Layout";
 
 const SignIn = () => {
   return (
-    <Layout title="SignIn">
+    <Layout title="SignIn" showTitle={true}>
       <Section>
         <Title>로그인</Title>
         <p style={{ color: "black" }}>

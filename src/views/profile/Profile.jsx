@@ -4,7 +4,7 @@ import Layout from "../../components/layout/Layout";
 
 export default function Profile() {
   return (
-    <Layout title="Profile">
+    <Layout title="Profile" showTitle={true}>
       <Section>
         <Title>프로필</Title>
         <p style={{ color: "black" }}>

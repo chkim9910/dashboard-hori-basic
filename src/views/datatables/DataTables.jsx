@@ -4,7 +4,7 @@ import Layout from "../../components/layout/Layout";
 
 export default function DataTables() {
   return (
-    <Layout title="DataTables">
+    <Layout title="DataTables" showTitle={true}>
       <Section>
         <Title>데이터테이블</Title>
         <p style={{ color: "black" }}>

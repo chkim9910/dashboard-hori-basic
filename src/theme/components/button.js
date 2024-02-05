@@ -9,6 +9,7 @@ export const buttonStyles = {
         boxSizing: "border-box",
         color: "white",
         backgroud: "red",
+        fontSize: "14px",
         _focus: {
           boxShadow: "none",
         },
@@ -27,14 +28,27 @@ export const buttonStyles = {
           color: { sm: "gray.800", lg: "gray.100" },
           // border: "none",
           borderRadius: "6px",
+          fontSize: "15px",
+          _hover: {
+            bg: "rgba(255, 255, 255, 0.3)",
+          },
         }),
         solid: () => ({
           borderRadius: "0",
-          bg: "white",
+          bg: "rgba(255, 255, 255, 0.2)",
           // bg: ["red.900", "brand.900", null, null, null, "brand.500"],
           color: "gray.900",
           // border: "none",
           borderRadius: "6px",
+          fontSize: "15px",
+          _hover: {
+            bg: "rgba(255, 255, 255, 0.5)",
+          },
+        }),
+        ghost: () => ({
+          _hover: {
+            bg: "rgba(255, 255, 255, 0.3)",
+          },
         }),
         brand: (props) => ({
           bg: mode("brand.500", "brand.400")(props),

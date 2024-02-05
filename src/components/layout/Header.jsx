@@ -15,11 +15,45 @@ import ContainerLg from "./Container";
 import { lighten } from "polished";
 import Gnb from "./Gnb";
 import { FaHamburger } from "react-icons/fa";
+import gsap from "gsap";
 
 export default function Header() {
+  // 스크롤 이벤트 핸들러
+  const HandleScroll = () => {
+    const scrollY = window.scrollY;
+    const hdWrap = document.getElementById("hdWrap");
+    const hd = document.querySelector(".nav-bar__wrapper");
+    const hdInner = document.getElementById("hdInner");
+    const tnb = document.querySelector(".nav-belt__wrapper");
+    const hdHeight = hdWrap.offsetHeight; // 헤더 높이
+    const topContHeight =
+      document.querySelector(".top-cont")?.offsetHeight || 0;
+    // ||(or 연산자): swiperHeight가 없으면 0을 넣어줌
+    if (window.innerWidth > 960) {
+      if (scrollY >= topContHeight - hdHeight + 100) {
+        gsap.to(hdWrap, { y: -32, duration: 0.5 });
+        gsap.to(hd, { background: "#fff", color: "#222", duration: 0.5 });
+        gsap.to(hdInner, { color: "#222", duration: 0.5 });
+        gsap.to(hd.querySelectorAll("button"), {
+          color: "#222",
+          duration: 0.5,
+        });
+      } else {
+        gsap.to(hdWrap, { y: 0 });
+        gsap.to(hd, { background: "rgba(255, 255, 255, 0.1)" });
+        gsap.to(hdInner, { color: "#fff" });
+        gsap.to(hd.querySelectorAll("button"), {
+          color: "#fff",
+        });
+      }
+    }
+  };
+  // 이벤트 리스너 등록
+  window.addEventListener("scroll", HandleScroll);
   return (
     <>
       <Box
+        id="hdWrap"
         as="header"
         position={"fixed"}
         top={0}
@@ -33,6 +67,8 @@ export default function Header() {
       >
         {/* tnb */}
         <Box
+          id="tnb"
+          className="nav-belt__wrapper"
           display={["none", null, null, null, "block"]}
           bg={"rgba(0,0,0,.6)"}
           // color={"#fff"}
@@ -67,15 +103,18 @@ export default function Header() {
         </Box>
         {/* header */}
         <Box
+          id="hd"
+          className="nav-bar__wrapper"
           borderBottom={"1px solid #ddd"}
           background={"rgba(0,0,0,.05)"}
           display={"flex"}
           alignItems={"center"}
           justifyContent={"center"}
-          height={{ sm: "52px", lg: "100px" }}
+          height={{ sm: "60px", lg: "60px" }}
           borderBottomWidth={0}
         >
           <Container
+            id="hdInner"
             display={"flex"}
             flexDirection={["column", null, "row"]}
             justifyContent={"space-between"}
@@ -83,7 +122,7 @@ export default function Header() {
             // gap={[10, null, 40]}
             color={"white"}
           >
-            <Heading as={"h1"}>
+            <Heading as={"h1"} fontSize={{ sm: "30px", lg: "36px" }}>
               <Link to="/">Dashboard</Link>
             </Heading>
             <Gnb />

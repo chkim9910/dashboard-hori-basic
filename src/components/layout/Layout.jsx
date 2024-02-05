@@ -4,6 +4,8 @@ import Header from "./Header";
 import ContainerLg from "./Container";
 
 export default function Layout(props) {
+  const ptValue =
+    props.pt !== undefined ? props.pt : { sm: "60px", lg: "92px" };
   return (
     <Box
       as="wrap"
@@ -13,7 +15,7 @@ export default function Layout(props) {
       color={"black"}
     >
       <Header />
-      <Box as="main" id="main" flexGrow={1}>
+      <Box as="main" id="main" flexGrow={1} pt={ptValue}>
         {props.showTitle && <h2>{props.title}</h2>}
         {props.children}
       </Box>
