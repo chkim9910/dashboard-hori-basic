@@ -1,4 +1,4 @@
-import { SearchIcon, SunIcon } from "@chakra-ui/icons";
+import { SearchIcon } from "@chakra-ui/icons";
 import {
   Box,
   Heading,
@@ -6,13 +6,13 @@ import {
   ButtonGroup,
   Button,
   Container,
-  ListItem,
-  UnorderedList,
+  // ListItem,
+  // UnorderedList,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
-import ContainerLg from "./Container";
-import { lighten } from "polished";
+// import styled from "styled-components";
+// import ContainerLg from "./Container";
+// import { lighten } from "polished";
 import Gnb from "./Gnb";
 import { FaHamburger } from "react-icons/fa";
 import gsap from "gsap";
@@ -21,10 +21,10 @@ export default function Header() {
   // 스크롤 이벤트 핸들러
   const HandleScroll = () => {
     const scrollY = window.scrollY;
-    const hdWrap = document.getElementById("hdWrap");
+    const hdWrap = document.querySelector("#hdWrap");
     const hd = document.querySelector(".nav-bar__wrapper");
-    const hdInner = document.getElementById("hdInner");
-    const tnb = document.querySelector(".nav-belt__wrapper");
+    const hdInner = document.querySelector("#hdInner");
+    // const tnb = document.querySelector(".nav-belt__wrapper");
     const hdHeight = hdWrap.offsetHeight; // 헤더 높이
     const topContHeight =
       document.querySelector(".top-cont")?.offsetHeight || 0;

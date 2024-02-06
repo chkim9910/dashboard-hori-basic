@@ -1,9 +1,11 @@
-import { Image, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
-import Tab from "../../components/common/Tab";
+// import { Image, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+// import Tab from "../../components/common/Tab";
 import Title from "../../components/common/Title";
 import { Section } from "../../components/layout/Container";
 import Layout from "../../components/layout/Layout";
 import { motion } from "framer-motion";
+import topImg from "../../assets/images/contact-bg.png";
+import { Image } from "@chakra-ui/react";
 
 export default function Marketplace() {
   const boxStyle = {
@@ -15,13 +17,8 @@ export default function Marketplace() {
 
   return (
     <Layout title="Marketplace" showTitle={true} pt={0}>
-      {/* <Image
-        className="top-cont"
-        src="../../assets/images/contact-bg.png"
-        alt="hello"
-        width={"100%"}
-      /> */}
-      <Tabs>
+      <Image className="top-cont" src={topImg} alt="hello" height={"100%"} />
+      {/* <Tabs>
         <TabList>
           <Tab>One</Tab>
           <Tab>Two</Tab>
@@ -39,7 +36,7 @@ export default function Marketplace() {
             <p>three!</p>
           </TabPanel>
         </TabPanels>
-      </Tabs>
+      </Tabs> */}
       <motion.div
         style={boxStyle}
         initial={{ opacity: 0 }}
