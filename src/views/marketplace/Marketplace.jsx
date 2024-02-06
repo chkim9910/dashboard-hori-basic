@@ -1,4 +1,4 @@
-import { Image } from "@chakra-ui/react";
+import { Image, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import Tab from "../../components/common/Tab";
 import Title from "../../components/common/Title";
 import { Section } from "../../components/layout/Container";
@@ -17,11 +17,29 @@ export default function Marketplace() {
     <Layout title="Marketplace" showTitle={true} pt={0}>
       {/* <Image
         className="top-cont"
-        src="../../assets/images/cnu3j07sra271.png"
+        src="../../assets/images/contact-bg.png"
         alt="hello"
-        height={"50%"}
+        width={"100%"}
       /> */}
+      <Tabs>
+        <TabList>
+          <Tab>One</Tab>
+          <Tab>Two</Tab>
+          <Tab>Three</Tab>
+        </TabList>
 
+        <TabPanels>
+          <TabPanel>
+            <p>one!</p>
+          </TabPanel>
+          <TabPanel>
+            <p>two!</p>
+          </TabPanel>
+          <TabPanel>
+            <p>three!</p>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
       <motion.div
         style={boxStyle}
         initial={{ opacity: 0 }}
